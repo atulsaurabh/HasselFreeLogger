@@ -100,5 +100,5 @@ public interface Logger
    public void logError(Class errorClass,String message);
    public void logError(Class errorClass,String message,Throwable throwable);
    
-    public void setResourceBundle(Properties properties);
+    public void setConfiguration(Properties properties);
 }

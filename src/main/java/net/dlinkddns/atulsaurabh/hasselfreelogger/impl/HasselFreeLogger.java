@@ -146,7 +146,7 @@ public class HasselFreeLogger implements Logger
     
     
 
-    public void setResourceBundle(Properties properties) 
+    public void setConfiguration(Properties properties) 
     {
         setOptions(properties);
     }
