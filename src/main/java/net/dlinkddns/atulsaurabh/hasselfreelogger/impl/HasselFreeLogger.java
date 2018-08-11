@@ -35,12 +35,12 @@ import org.apache.log4j.PatternLayout;
  * Otherwise Log4j dependencies need to be satisfied manually.
  * <h3>Purposes</h3>
  * <p>
- * __Purpose:__ of this class is to provide a hassle free logging technique. 
+ * Purpose of this class is to provide a hassle free logging technique. 
  * The implementation supports rolling based logging as well as non rolling
  * based logging mechanism. The rolling option can be activated by setting 
  * {@link #rollingOn} field.
  * 
- * <p>
+ *<p>
  * Using this class following level of log can be recorded
  * <pre>
  * {@link org.apache.log4j.Level#ALL}, {@link org.apache.log4j.Level#DEBUG},
@@ -55,23 +55,25 @@ import org.apache.log4j.PatternLayout;
  * can be configured by changing inside {@link ResourceBundle} file.
  * The following keys are used to configure the log files:
  * <ul>
- *     <li> log.all   : To log {@link org.apache.log4j.Level#ALL}
- *     <li> log.debug : To log {@link org.apache.log4j.Level#DEBUG} 
- *     <li> log.error : To log {@link org.apache.log4j.Level#ERROR}
- *     <li> log.fatal : To log {@link org.apache.log4j.Level#FATAL}
- *     <li> log.info  : To log {@link org.apache.log4j.Level#INFO}
- *     <li> log.warn  : To log {@link org.apache.log4j.Level#WARN}
+ *     <li> log.all         : To log {@link org.apache.log4j.Level#ALL}
+ *     <li> log.debug       : To log {@link org.apache.log4j.Level#DEBUG} 
+ *     <li> log.error       : To log {@link org.apache.log4j.Level#ERROR}
+ *     <li> log.fatal       : To log {@link org.apache.log4j.Level#FATAL}
+ *     <li> log.info        : To log {@link org.apache.log4j.Level#INFO}
+ *     <li> log.warn        : To log {@link org.apache.log4j.Level#WARN}
+ *     <li> log.datepattern : To configure the pattern of date of logging
+ *     <li> log.rolling     : To set the rolling on or off
  * </ul>
  * Along with the files, the director for log repository can also be configured
- * by setting the key <b><i>log.directory</i></b> in {@link ResourceBundle} file.
+ * by setting the key <b><i>log.directory</i></b> in {@link Properties} file.
  * <h3>Features</h3>
  * <p>
  * The rolling based logging mechanism provides a way to log the message on the 
  * basis of date and time. The date and time option is configurable.
- * The format can be decided using {@link #datePattern}. 
+ * The format can be decided using {@link #setDatePattern(java.lang.String)} method. 
  * <p>
- *The format of content is also configurable. This format can be modified using
- * {@link #conversionPattern}
+ * The format of content is also configurable. This format can be modified using
+ * {@link #setConversionPattern(java.lang.String)} method.
  * 
  * @see #setRollingOn(boolean)
  * @see #setDatePattern(java.lang.String) 
@@ -85,34 +87,75 @@ import org.apache.log4j.PatternLayout;
 public class HasselFreeLogger implements Logger
 {
   
+    /**
+     * This field stores the directory where the log file will be generated.
+     * @since 1.0
+     * 
+     */
    private String log_directory_name;
    
-  
+   /**
+    * This field stores the name of the log file where {@link Level#FATAL} is recorded.
+    * @since 1.0
+    */
    private String fatal_log_file_name;
    
-  
+  /**
+    * This field stores the name of the log file where {@link Level#DEBUG} is recorded.
+    * @since 1.0
+    */
    private String debug_log_file_name;
    
-   
+   /**
+    * This field stores the name of the log file where {@link Level#INFO} is recorded.
+    * @since 1.0
+    */
    private String info_log_file_name;
    
-   
+   /**
+    * This field stores the name of the log file where {@link Level#ERROR} is recorded.
+    * @since 1.0
+    */
    private String error_log_file_name;
    
-   
+   /**
+    * This field stores the name of the log file where {@link Level#WARN} is recorded.
+    * @since 1.0
+    */
    private String warn_log_file_name;
    
-   
+   /**
+    * This field stores the name of the log file where {@link Level#ALL} is recorded.
+    * @since 1.0
+    */
    private String all_log_file_name;
    
-   
+   /**
+    * This field stores the pattern used to record the log message.
+    * @since 1.0
+    */
    
    private String conversionPattern;
    
+   /**
+   * The field is required to make rolling on feature on or off.
+   * @since 1.0
+   */
    private boolean rollingOn=false;
   
+   /**
+    * This field stores pattern used in recording the log.
+    * @since 1.0
+    */
    private String datePattern;
    
+   /**
+    * This is a default constructor. It provides the default configuration for the 
+    * system. By default the rolling feature is kept off and date pattern is
+    * dd-MM-yyyy e.g. 03-05-2018.
+    * Some default file names and directory name is also provided.
+    * @since 1.0
+    */
     public HasselFreeLogger() 
     {
         this.log_directory_name="log";
@@ -126,11 +169,36 @@ public class HasselFreeLogger implements Logger
         this.rollingOn=false;
     }
 
+    /**
+     * 
+     * @param properties The parameter is required if the external configuration is 
+     *                   required. All the external configuration should be stored
+     *                   inside a {@link  java.util.Properties} file.  Inside properties
+     *                   file, the information is stored in form of <b>key=value</b>
+     *                   pair. The keys are already decided. The value may be any user defined
+     *                   value. The system consider project root as the root directory. So all
+     *                   the values must be relative to the project root only.
+     * @since 1.0
+     */
     public HasselFreeLogger(Properties properties) {
         setOptions(properties);
     }
     
     
+    /**
+     * This is a {@literal private} method. This method reads all the external 
+     * configuration and stores inside corresponding fields. This method is called 
+     * from two major points viz {@link #HasselFreeLogger(java.util.Properties)} and
+     * {@link #setConfiguration(java.util.Properties)}.
+     * This means that user has two choices:
+     * <ul>
+     * <li> Create the instance using {@link #HasselFreeLogger() } and override settings
+     *      using {@link #setConfiguration(java.util.Properties) }
+     * <li> Create instance using {@link #HasselFreeLogger(java.util.Properties) }
+     * </ul>
+     * @param properties used for external configuration.
+     * @since 1.0
+     */
     private void setOptions(Properties properties)
     {
         this.log_directory_name=properties.getProperty("log.directory");      
@@ -145,6 +213,13 @@ public class HasselFreeLogger implements Logger
     }
     
     
+    /**
+     * If the user has created an instance using {@link #HasselFreeLogger() } constructor 
+     * and still want to use external configuration, it can use this method to override 
+     * the settings.
+     * @param properties externally configured information. 
+     * @since 1.0
+     */
 
     public void setConfiguration(Properties properties) 
     {
@@ -152,8 +227,8 @@ public class HasselFreeLogger implements Logger
     }
    
     /**
-     * Logs the fatal level. 
-     * @param message The fatal level message to be logged in
+     * Records the fatal level log message. 
+     * @param message The fatal level message to be logged in.
      * @since 1.0 
      */
     @Override
@@ -165,8 +240,9 @@ public class HasselFreeLogger implements Logger
 
     /**
      * 
-     * @param errorClass  The class where the exception is generated
-     * @param message The fatal level message to be logged in
+     * @param errorClass  The class where the exception is generated.
+     * @param message The fatal level message to be logged in.
+     * @since 1.0
      */
     @Override
     public void logFatal(Class errorClass, String message) {
@@ -176,9 +252,10 @@ public class HasselFreeLogger implements Logger
     
     /**
      * 
-     * @param errorClass The class where the exception is generated
-     * @param message The fatal level message to be logged in
-     * @param throwable The exception to be logged in 
+     * @param errorClass The class where the exception is generated.
+     * @param message The fatal level message to be logged in.
+     * @param throwable The exception to be logged in.
+     * @since 1.0
      */
 
     @Override
@@ -191,6 +268,7 @@ public class HasselFreeLogger implements Logger
      * 
      * @param message The message to be logged in. The logging will be done for 
      *                every level.
+     * @since 1.0
      */
 
     @Override
@@ -205,6 +283,7 @@ public class HasselFreeLogger implements Logger
      * @param errorClass The class where exception is caught
      * @param message The message to be logged in. The logging will be done for 
      *                every level.
+     * @since 1.0
      */
 
     @Override
@@ -220,6 +299,7 @@ public class HasselFreeLogger implements Logger
      * @param message The message to be logged in. The logging will be done for 
      *                every level.
      * @param throwable The exception generated.
+     * @since 1.0
      */
     @Override
     public void logAll(Class errorClass, String message, Throwable throwable) {
@@ -295,6 +375,7 @@ public class HasselFreeLogger implements Logger
     * @return DailyRollingFileAppender. This class is used for creating date wise log.
     * @throws URISyntaxException throws exception if the URI for log directory is not valid
     * @param fileName File name where the log will be recorded.
+    * @since 1.0
     */
   private DailyRollingFileAppender getRollingFileAdapter(String fileName) throws URISyntaxException
   {
@@ -313,6 +394,11 @@ public class HasselFreeLogger implements Logger
       return rollingAppender;
   }
 
+    /**
+     * 
+     * @return the conversion pattern i.e. the pattern used to log the message
+     * @since 1.0
+     */
     @Override
     public String getConversionPattern()
     {
@@ -321,53 +407,125 @@ public class HasselFreeLogger implements Logger
         else
             return conversionPattern;
     }
+    
+    /**
+     * 
+     * @param conversionPattern This a {@link java.lang.String} which represents
+     * the patterns used to record the log messages.
+     * @since 1.0
+     */
 
     @Override
     public void setConversionPattern(String conversionPattern) {
         this.conversionPattern = conversionPattern;
     }
 
+    /**
+     * 
+     * @param message The message to be recorded in. This is a warning message.
+     * @since 1.0
+     */
     @Override
     public void logWarning(String message) {
         org.apache.log4j.Logger logger = log(null, Level.WARN);
         logger.warn(message);
     }
+    
+    /**
+     * 
+     * @param warningClass The {@link java.lang.Class} where a warning message is generated.
+     * @param message The message to be recorded in.
+     * @see java.lang.Class
+     * @since 1.0
+     */
 
     @Override
     public void logWarning(Class warningClass, String message) {
       org.apache.log4j.Logger logger = log(warningClass, Level.WARN);
         logger.warn(message);  
     }
+    
+    /**
+     * 
+     * @param warningClass The {@link java.lang.Class} generating the warning message.
+     * @param message The message to be recorded in.
+     * @param throwable The exception generated.
+     * @see java.lang.Class
+     * @see java.lang.Throwable
+     * @since 1.0
+     */
 
     @Override
     public void logWarning(Class warningClass, String message, Throwable throwable) {
        org.apache.log4j.Logger logger = log(warningClass, Level.WARN);
        logger.warn(message,throwable); 
     }
+    
+    /**
+     * 
+     * @param message The information message to be recorded in.
+     * @since 1.0
+     */
 
     @Override
     public void logInfo(String message) {
       org.apache.log4j.Logger logger = log(null, Level.INFO);
        logger.info(message);   
     }
+    
+    /**
+     * 
+     * @param infoClass The {@link java.lang.Class} which is generating the message
+     * @param message The {@link java.lang.String} representing the message to log in.
+     * @see java.lang.Class
+     * @see java.lang.String
+     * @since 1.0
+     */
 
     @Override
     public void logInfo(Class infoClass, String message) {
      org.apache.log4j.Logger logger = log(infoClass, Level.INFO);
      logger.info(message);   
     }
+    
+    /**
+     * 
+     * @param infoClass The {@link java.lang.Class} which is generating the message
+     * @param message  The {@link java.lang.String} representing the message to log in.
+     * @param throwable The exception generated.
+     * @see java.lang.Class
+     * @see java.lang.String
+     * @see java.lang.Throwable
+     * @since 1.0
+     */
 
     @Override
     public void logInfo(Class infoClass, String message, Throwable throwable) {
      org.apache.log4j.Logger logger = log(infoClass, Level.INFO);
      logger.info(message,throwable);    
     }
+    
+    /**
+     * 
+     * @param message The {@link java.lang.String} representing debug message to log in.
+     * @see java.lang.String
+     * @since 1.0
+     */
 
     @Override
     public void logDebug(String message) {
      org.apache.log4j.Logger logger = log(null, Level.DEBUG);
      logger.debug(message);    
     }
+    
+    /**
+     *  
+     * @param debugClass The {@link java.lang.Class} generating the debug message 
+     * @param message The {@link java.lang.String} representing the debug message to log in.
+     * @see java.lang.String
+     * @see java.lang.Class
+     * @since 1.0
+     */
 
     @Override
     public void logDebug(Class debugClass, String message) {

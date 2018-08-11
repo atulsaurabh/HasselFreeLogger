@@ -1,0 +1,28 @@
+var interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger =
+[
+    [ "getConversionPattern", "d7/d4f/interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#af32cfe36f98ae7223ab0ec37fc6c67f5", null ],
+    [ "getDatePattern", "d7/d4f/interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#ae0413346b180ceebfe7b522ed414a8ae", null ],
+    [ "isRollingOn", "d7/d4f/interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#a3815e1c6e6688af733cd8d098891c6da", null ],
+    [ "logAll", "d7/d4f/interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#a800f4847161a507a83b0d6731a01c210", null ],
+    [ "logAll", "d7/d4f/interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#ab5766fc9b8c0c78851d5ea90ade467b7", null ],
+    [ "logAll", "d7/d4f/interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#ad4c20aef678e51ab4822f5c301103f00", null ],
+    [ "logDebug", "d7/d4f/interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#aabcbfa63158adde4db9d5735ef47663c", null ],
+    [ "logDebug", "d7/d4f/interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#a029beee59dc44362c279f0a067dd0703", null ],
+    [ "logDebug", "d7/d4f/interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#aff388bb623493721b9aac70ef39492ec", null ],
+    [ "logError", "d7/d4f/interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#ae6a2cef332dfb10951c4cbfd822bbb63", null ],
+    [ "logError", "d7/d4f/interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#adf72322be1f6a5eaf0cf1b491b430b06", null ],
+    [ "logError", "d7/d4f/interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#a387cbc7fc16609202f2c63e88233ba49", null ],
+    [ "logFatal", "d7/d4f/interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#ae8fc6e4aeac87030546af120682aa178", null ],
+    [ "logFatal", "d7/d4f/interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#a05f87f45fe4302254060a2dac3429207", null ],
+    [ "logFatal", "d7/d4f/interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#a9ac7490ed937913b6dd97ee8898119bb", null ],
+    [ "logInfo", "d7/d4f/interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#a90d0ff9fde52620be6884f4dee4ba00f", null ],
+    [ "logInfo", "d7/d4f/interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#ac0c7463bc249c77cd33e02b99a77a8d8", null ],
+    [ "logInfo", "d7/d4f/interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#a07cf4314c71f95135245d10dffc14d2f", null ],
+    [ "logWarning", "d7/d4f/interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#a7a267e7aa9c678bdb6a3a7ca02a10efd", null ],
+    [ "logWarning", "d7/d4f/interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#a2db4a8f0188cecd4ba6780b31136ded8", null ],
+    [ "logWarning", "d7/d4f/interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#af0535a8b640adb65e6830468b327d1da", null ],
+    [ "setConfiguration", "d7/d4f/interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#abe93800e399a9836cb92e6cb902a4ad8", null ],
+    [ "setConversionPattern", "d7/d4f/interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#a5a1b9dac86c15782309e01d5327e4299", null ],
+    [ "setDatePattern", "d7/d4f/interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#a80727ab10655fa0ca0c5249ec3ed45b8", null ],
+    [ "setRollingOn", "d7/d4f/interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#a2f15f4d94258528efb2938323deb8135", null ]
+];

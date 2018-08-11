@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +54,22 @@ $(function() {
 /* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('functions.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -63,85 +87,155 @@ $(function() {
 <div class="contents">
 <div class="textblock">Here is a list of all class members with links to the classes they belong to:</div>
 
+<h3><a id="index_a"></a>- a -</h3><ul>
+<li>all_log_file_name
+: <a class="el" href="d8/de1/classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#a3a3f8e530a17b2623a482c50d091e531">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
+</li>
+</ul>
+
+
+<h3><a id="index_c"></a>- c -</h3><ul>
+<li>conversionPattern
+: <a class="el" href="d8/de1/classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#a9e05fdd81d207cfd60132cc3b15b26cb">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
+</li>
+</ul>
+
+
+<h3><a id="index_d"></a>- d -</h3><ul>
+<li>datePattern
+: <a class="el" href="d8/de1/classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#aa2dcc355996a8d6e3cc52fad0774f0fd">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
+</li>
+<li>debug_log_file_name
+: <a class="el" href="d8/de1/classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#aca408fb67e695b6236ca9678fa45e88a">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
+</li>
+</ul>
+
+
+<h3><a id="index_e"></a>- e -</h3><ul>
+<li>error_log_file_name
+: <a class="el" href="d8/de1/classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#aa16478babc0ba959e95ab4950c89b259">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
+</li>
+</ul>
+
+
+<h3><a id="index_f"></a>- f -</h3><ul>
+<li>fatal_log_file_name
+: <a class="el" href="d8/de1/classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#acd10249a6d38c569825ab0423eada5c6">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
+</li>
+</ul>
+
+
 <h3><a id="index_g"></a>- g -</h3><ul>
 <li>getConversionPattern()
-: <a class="el" href="interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#af32cfe36f98ae7223ab0ec37fc6c67f5">net.dlinkddns.atulsaurabh.hasselfreelogger.api.Logger</a>
-, <a class="el" href="classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#a8309e8b9abe877ce11e6b04faf48e8c1">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
+: <a class="el" href="d7/d4f/interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#af32cfe36f98ae7223ab0ec37fc6c67f5">net.dlinkddns.atulsaurabh.hasselfreelogger.api.Logger</a>
+, <a class="el" href="d8/de1/classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#a8309e8b9abe877ce11e6b04faf48e8c1">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
 </li>
 <li>getDatePattern()
-: <a class="el" href="interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#ae0413346b180ceebfe7b522ed414a8ae">net.dlinkddns.atulsaurabh.hasselfreelogger.api.Logger</a>
-, <a class="el" href="classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#a9b56e6059627b493e8f5ebff888795a0">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
+: <a class="el" href="d7/d4f/interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#ae0413346b180ceebfe7b522ed414a8ae">net.dlinkddns.atulsaurabh.hasselfreelogger.api.Logger</a>
+, <a class="el" href="d8/de1/classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#a9b56e6059627b493e8f5ebff888795a0">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
+</li>
+<li>getRollingFileAdapter()
+: <a class="el" href="d8/de1/classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#a33e52eaefee44a20c6146c29abf4fb3d">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
 </li>
 </ul>
 
 
 <h3><a id="index_h"></a>- h -</h3><ul>
 <li>HasselFreeLogger()
-: <a class="el" href="classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#a603e83e38bc2c011dd3e5edf074acb1d">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
+: <a class="el" href="d8/de1/classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#a603e83e38bc2c011dd3e5edf074acb1d">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
 </li>
 </ul>
 
 
 <h3><a id="index_i"></a>- i -</h3><ul>
+<li>info_log_file_name
+: <a class="el" href="d8/de1/classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#a1d31fe351be538fc56d3ea533b966eb4">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
+</li>
 <li>isRollingOn()
-: <a class="el" href="interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#a3815e1c6e6688af733cd8d098891c6da">net.dlinkddns.atulsaurabh.hasselfreelogger.api.Logger</a>
-, <a class="el" href="classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#a1264dcefa68828985aa843e545ff41b6">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
+: <a class="el" href="d7/d4f/interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#a3815e1c6e6688af733cd8d098891c6da">net.dlinkddns.atulsaurabh.hasselfreelogger.api.Logger</a>
+, <a class="el" href="d8/de1/classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#a1264dcefa68828985aa843e545ff41b6">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
 </li>
 </ul>
 
 
 <h3><a id="index_l"></a>- l -</h3><ul>
+<li>log()
+: <a class="el" href="d8/de1/classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#af0d3b51d857b4df4ef5f5356e2e07ada">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
+</li>
+<li>log_directory_name
+: <a class="el" href="d8/de1/classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#adbc3e4df8942c21a7328cd04a141bb34">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
+</li>
 <li>logAll()
-: <a class="el" href="interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#a800f4847161a507a83b0d6731a01c210">net.dlinkddns.atulsaurabh.hasselfreelogger.api.Logger</a>
-, <a class="el" href="classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#af433939b275c708e5334f56a6444e2af">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
+: <a class="el" href="d7/d4f/interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#a800f4847161a507a83b0d6731a01c210">net.dlinkddns.atulsaurabh.hasselfreelogger.api.Logger</a>
+, <a class="el" href="d8/de1/classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#af433939b275c708e5334f56a6444e2af">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
 </li>
 <li>logDebug()
-: <a class="el" href="interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#aff388bb623493721b9aac70ef39492ec">net.dlinkddns.atulsaurabh.hasselfreelogger.api.Logger</a>
-, <a class="el" href="classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#a7aafa489bd14255cbdb43c1f2494d433">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
+: <a class="el" href="d7/d4f/interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#aabcbfa63158adde4db9d5735ef47663c">net.dlinkddns.atulsaurabh.hasselfreelogger.api.Logger</a>
+, <a class="el" href="d8/de1/classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#a7aafa489bd14255cbdb43c1f2494d433">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
 </li>
 <li>logError()
-: <a class="el" href="interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#ae6a2cef332dfb10951c4cbfd822bbb63">net.dlinkddns.atulsaurabh.hasselfreelogger.api.Logger</a>
-, <a class="el" href="classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#a94641af9c6c39ea601d5c41bf68a4b1f">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
+: <a class="el" href="d7/d4f/interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#ae6a2cef332dfb10951c4cbfd822bbb63">net.dlinkddns.atulsaurabh.hasselfreelogger.api.Logger</a>
+, <a class="el" href="d8/de1/classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#a94641af9c6c39ea601d5c41bf68a4b1f">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
 </li>
 <li>logFatal()
-: <a class="el" href="interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#ae8fc6e4aeac87030546af120682aa178">net.dlinkddns.atulsaurabh.hasselfreelogger.api.Logger</a>
-, <a class="el" href="classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#a478d877ebdbb5cb2796ad23d0dafe369">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
+: <a class="el" href="d7/d4f/interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#ae8fc6e4aeac87030546af120682aa178">net.dlinkddns.atulsaurabh.hasselfreelogger.api.Logger</a>
+, <a class="el" href="d8/de1/classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#a478d877ebdbb5cb2796ad23d0dafe369">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
 </li>
 <li>logInfo()
-: <a class="el" href="interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#ac0c7463bc249c77cd33e02b99a77a8d8">net.dlinkddns.atulsaurabh.hasselfreelogger.api.Logger</a>
-, <a class="el" href="classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#ac0596a92805b29d9402a9eb17c71891a">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
+: <a class="el" href="d7/d4f/interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#a90d0ff9fde52620be6884f4dee4ba00f">net.dlinkddns.atulsaurabh.hasselfreelogger.api.Logger</a>
+, <a class="el" href="d8/de1/classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#abca8e8a8a8c85d582092b35fc395d726">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
 </li>
 <li>logWarning()
-: <a class="el" href="interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#a2db4a8f0188cecd4ba6780b31136ded8">net.dlinkddns.atulsaurabh.hasselfreelogger.api.Logger</a>
-, <a class="el" href="classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#ad5f8400bc0ea2500509a4154cfa48bf5">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
+: <a class="el" href="d7/d4f/interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#a7a267e7aa9c678bdb6a3a7ca02a10efd">net.dlinkddns.atulsaurabh.hasselfreelogger.api.Logger</a>
+, <a class="el" href="d8/de1/classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#a9e847886284d6a0f7edef691e2d11efd">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
+</li>
+</ul>
+
+
+<h3><a id="index_r"></a>- r -</h3><ul>
+<li>rollingOn
+: <a class="el" href="d8/de1/classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#a7d4b387ecfa16af11b2b169ac3f062a3">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
 </li>
 </ul>
 
 
 <h3><a id="index_s"></a>- s -</h3><ul>
+<li>setConfiguration()
+: <a class="el" href="d7/d4f/interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#abe93800e399a9836cb92e6cb902a4ad8">net.dlinkddns.atulsaurabh.hasselfreelogger.api.Logger</a>
+, <a class="el" href="d8/de1/classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#a9dbc7356642960679aaa76cc054ce456">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
+</li>
 <li>setConversionPattern()
-: <a class="el" href="interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#a5a1b9dac86c15782309e01d5327e4299">net.dlinkddns.atulsaurabh.hasselfreelogger.api.Logger</a>
-, <a class="el" href="classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#a23a1e3b5c56528e197c7eb3832e7c69e">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
+: <a class="el" href="d7/d4f/interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#a5a1b9dac86c15782309e01d5327e4299">net.dlinkddns.atulsaurabh.hasselfreelogger.api.Logger</a>
+, <a class="el" href="d8/de1/classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#a23a1e3b5c56528e197c7eb3832e7c69e">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
 </li>
 <li>setDatePattern()
-: <a class="el" href="interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#a80727ab10655fa0ca0c5249ec3ed45b8">net.dlinkddns.atulsaurabh.hasselfreelogger.api.Logger</a>
-, <a class="el" href="classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#a72529568d69eea543b2238a466cedf8d">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
+: <a class="el" href="d7/d4f/interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#a80727ab10655fa0ca0c5249ec3ed45b8">net.dlinkddns.atulsaurabh.hasselfreelogger.api.Logger</a>
+, <a class="el" href="d8/de1/classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#a72529568d69eea543b2238a466cedf8d">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
 </li>
-<li>setResourceBundle()
-: <a class="el" href="interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#ad230d0cc0820137da2e5842b3c850f10">net.dlinkddns.atulsaurabh.hasselfreelogger.api.Logger</a>
-, <a class="el" href="classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#a33f376ecfd8258b672cdfb93514c14b0">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
+<li>setOptions()
+: <a class="el" href="d8/de1/classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#af159818a248f7cd39c79ead6e08efda8">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
 </li>
 <li>setRollingOn()
-: <a class="el" href="interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#a2f15f4d94258528efb2938323deb8135">net.dlinkddns.atulsaurabh.hasselfreelogger.api.Logger</a>
-, <a class="el" href="classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#a9ef8b4f7c9615f50c03f168f1b949f64">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
+: <a class="el" href="d7/d4f/interfacenet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1api_1_1_logger.html#a2f15f4d94258528efb2938323deb8135">net.dlinkddns.atulsaurabh.hasselfreelogger.api.Logger</a>
+, <a class="el" href="d8/de1/classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#a9ef8b4f7c9615f50c03f168f1b949f64">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
+</li>
+</ul>
+
+
+<h3><a id="index_w"></a>- w -</h3><ul>
+<li>warn_log_file_name
+: <a class="el" href="d8/de1/classnet_1_1dlinkddns_1_1atulsaurabh_1_1hasselfreelogger_1_1impl_1_1_hassel_free_logger.html#a697e12961052a566e13c8ae48248cce9">net.dlinkddns.atulsaurabh.hasselfreelogger.impl.HasselFreeLogger</a>
 </li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>
